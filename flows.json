@@ -1,0 +1,444 @@
+[
+    {
+        "id": "6d0849f6b4d96bb9",
+        "type": "tab",
+        "label": "Fluxo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "88220241c8470b07",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "test.mosquitto.org",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "f8e007588492d16a",
+        "type": "ui_tab",
+        "name": "Monitoramento",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c9adde113f1a7cc9",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "ca675f499ebca1dc",
+        "type": "ui_group",
+        "name": "",
+        "tab": "f8e007588492d16a",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a4f4e1f2e7b9fb7c",
+        "type": "ui_group",
+        "name": "Alerta Crítico",
+        "tab": "",
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f86536cbc9428a6a",
+        "type": "ui_group",
+        "name": "",
+        "tab": "f8e007588492d16a",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "21f1e631b56341e0",
+        "type": "sqlitedb",
+        "db": "./sensores.db",
+        "mode": "RWC"
+    },
+    {
+        "id": "6764082793a8554b",
+        "type": "mqtt in",
+        "z": "6d0849f6b4d96bb9",
+        "name": "",
+        "topic": "vitalcare/geral",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "88220241c8470b07",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 220,
+        "wires": [
+            [
+                "a1227557fe151f18",
+                "8f16b0f79f047c6e"
+            ]
+        ]
+    },
+    {
+        "id": "a1227557fe151f18",
+        "type": "debug",
+        "z": "6d0849f6b4d96bb9",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 160,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "b090681db619d90b",
+        "type": "ui_gauge",
+        "z": "6d0849f6b4d96bb9",
+        "name": "",
+        "group": "ca675f499ebca1dc",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 650,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "da3241b70aa3fa3f",
+        "type": "ui_gauge",
+        "z": "6d0849f6b4d96bb9",
+        "name": "",
+        "group": "ca675f499ebca1dc",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Umidade",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 640,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "276e74369237b1c3",
+        "type": "ui_gauge",
+        "z": "6d0849f6b4d96bb9",
+        "name": "",
+        "group": "ca675f499ebca1dc",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Nível de Água",
+        "label": "cm",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "300",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 660,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "8f16b0f79f047c6e",
+        "type": "function",
+        "z": "6d0849f6b4d96bb9",
+        "name": "dividirPayload",
+        "func": "return [\n  { payload: msg.payload.temperatura },\n  { payload: msg.payload.umidade },\n  { payload: msg.payload.nivelAguaCM }\n];",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 140,
+        "wires": [
+            [
+                "b090681db619d90b"
+            ],
+            [
+                "da3241b70aa3fa3f"
+            ],
+            [
+                "276e74369237b1c3",
+                "404f6b3879a0f298",
+                "a6ba537b8a2580f9"
+            ]
+        ]
+    },
+    {
+        "id": "7b14a19bf964374e",
+        "type": "ui_gauge",
+        "z": "6d0849f6b4d96bb9",
+        "name": "",
+        "group": "f86536cbc9428a6a",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Alerta de Enchente",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "2",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 670,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "404f6b3879a0f298",
+        "type": "function",
+        "z": "6d0849f6b4d96bb9",
+        "name": "alertaEnchente",
+        "func": "let nivel = msg.payload;\n\nlet alerta = 0; // Seguro\nif (nivel < 10) {\n  alerta = 2; // Crítico\n} else if (nivel < 20) {\n  alerta = 1; // Atenção\n}\n\nmsg.payload = alerta;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 200,
+        "wires": [
+            [
+                "7b14a19bf964374e"
+            ]
+        ]
+    },
+    {
+        "id": "7ce75687c9f316e1",
+        "type": "ui_text",
+        "z": "6d0849f6b4d96bb9",
+        "group": "f86536cbc9428a6a",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Nível",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 630,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "a6ba537b8a2580f9",
+        "type": "function",
+        "z": "6d0849f6b4d96bb9",
+        "name": "alertaEnchenteTexto",
+        "func": "let nivel = msg.payload;\nlet status = \"Seguro\";\n\nif (nivel < 10) {\n  status = \"Crítico 🚨\";\n} else if (nivel < 20) {\n  status = \"Atenção ⚠️\";\n}\n\nmsg.payload = status;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 240,
+        "wires": [
+            [
+                "7ce75687c9f316e1"
+            ]
+        ]
+    },
+    {
+        "id": "018e5e9a39b90f79",
+        "type": "mqtt in",
+        "z": "6d0849f6b4d96bb9",
+        "name": "",
+        "topic": "vitalcare/alerta",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "88220241c8470b07",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 280,
+        "wires": [
+            [
+                "a1227557fe151f18"
+            ]
+        ]
+    }
+]
