@@ -21,6 +21,7 @@ Este projeto apresenta uma solução de baixo custo baseada em IoT, capaz de:
 - Monitorar o nível da água em tempo real.
 - Exibir os dados em um dashboard visual.
 - Enviar alertas automáticos quando há risco de alagamento.
+- O led acende no local para avisar pessoas próximas
 
 ---
 
@@ -31,6 +32,7 @@ A solução foi estruturada em três camadas principais, garantindo comunicaçã
 - ESP32
 - Sensor ultrassônico
 - Sensor DHT
+- LED
 - Protocolo de Comunicação: MQTT
 2. 📡 Camada de Conectividade e Processamento
 - Wi-Fi (Wokwi Guest): Conecta o ESP32 à internet durante a simulação.
@@ -47,6 +49,7 @@ A solução foi estruturada em três camadas principais, garantindo comunicaçã
 - 💻 ESP32 (simulado via Wokwi)
 - 🌡️ Sensor ultrassônico (nível de água)
 - 🌦️ Sensor DHT (temperatura e umidade)
+- 💡 LED
 - 🔄 Protocolo MQTT
 - 🧠 Node-RED ou HiveMQ Web Client (para visualização dos dados)
 
