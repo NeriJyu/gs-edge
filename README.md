@@ -90,6 +90,8 @@ A solução foi estruturada em três camadas principais, garantindo comunicaçã
 - `vitalcare/alerta`
 5. Clique em Messages para visualizar os dados em tempo real.
 
+---
+
 ## 🧑‍💻 Equipe
 - Diogo Cecchini Bueno       RM 560427
 - Gustavo Neri Santos        RM 560239
