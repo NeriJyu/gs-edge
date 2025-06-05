@@ -22,7 +22,23 @@ Este projeto apresenta uma solução de baixo custo baseada em IoT, capaz de:
 - Exibir os dados em um dashboard visual.
 - Enviar alertas automáticos quando há risco de alagamento.
 
-A arquitetura envolve sensores conectados a um ESP32, que envia os dados via MQTT para um sistema em Node-RED. A visualização é feita em tempo real com gauges e alertas.
+---
+
+## 🧱 Arquitetura da Solução
+
+A solução foi estruturada em três camadas principais, garantindo comunicação eficiente entre sensores, rede e visualização dos dados em tempo real:
+1. 🌊 Camada de Dispositivos (IoT)
+- ESP32
+- Sensor ultrassônico
+- Sensor DHT
+- Protocolo de Comunicação: MQTT
+2. 📡 Camada de Conectividade e Processamento
+- Wi-Fi (Wokwi Guest): Conecta o ESP32 à internet durante a simulação.
+- Broker MQTT (Mosquitto - test.mosquitto.org): Intermediador que recebe e distribui mensagens publicadas pelo ESP32.
+3. 📊 Camada de Visualização e Ação
+- Recebe os dados MQTT em tempo real.
+- Exibe no dashboard os valores de temperatura, umidade e nível da água.
+- Envia alertas visuais (ex: mudança de cor ou mensagem de risco).
 
 ---
 
