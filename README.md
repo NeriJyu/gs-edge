@@ -57,12 +57,14 @@ A arquitetura envolve sensores conectados a um ESP32, que envia os dados via MQT
 ## 📡 Visualizar os dados com HiveMQ Web Client
 1. Acesse: [HiveMQ WebSocket Client](https://www.hivemq.com/demos/websocket-client/)
 2. Preencha:
+
 | Campo     | Valor                |
 | --------- | -------------------- |
 | Host      | `test.mosquitto.org` |
 | Port      | `8081`               |
-| Use SSL   | ✅ (marcar)          |
+| Use SSL   | Assinale             |
 | Client ID | Qualquer nome        |
+
 3. Clique em Connect
 4. Em Subscription, digite:
 - `vitalcare/geral`
