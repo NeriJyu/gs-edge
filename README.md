@@ -45,10 +45,14 @@ A arquitetura envolve sensores conectados a um ESP32, que envia os dados via MQT
 - Host: `test.mosquitto.org`
 - Porta: `1883`
 
+---
+
 ## 📡 Visualizar os dados com Node-RED
 - Importe o fluxo flow.json no seu Node-RED local.
 - Conecte ao broker MQTT.
 - Veja os dados no painel: nível da água, temperatura, umidade e alertas.
+
+---
 
 ## 📡 Visualizar os dados com HiveMQ Web Client
 1. Acesse: [HiveMQ WebSocket Client](https://www.hivemq.com/demos/websocket-client/)
