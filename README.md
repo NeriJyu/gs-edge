@@ -4,7 +4,7 @@
 
 ## Url do Projeto
 - [Wokwi](https://wokwi.com/projects/432408126780728321)
-- [Vídeo Explicativo](https://www.youtube.com/watch?v=c-JunqTGOkQ)
+- [Vídeo Explicativo](https://youtu.be/tdp-419xu-c)
 
 ---
 
